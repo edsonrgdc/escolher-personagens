@@ -7,22 +7,21 @@ function Select({ nome }) {
 }
 
 function Paises() {
-    const locais = [ 'Japan', 'Japan', 'Brazil', 'U.S.A','U.S.A', 'U.S.S.R'
+    const locais = ['Japan', 'Japan', 'Brazil', 'U.S.A', 'U.S.A', 'U.S.S.R'
     ]
-
-    return <p>locais</p>
+    return <p>{locais}</p>
 }
 
 function Personagens() {
     const personagens = ['Ken', 'Ryu']
-    return <div>personagens</div>
+
+    return <div>{personagens}</div>
 }
 
 function Players() {
-    const player1 = 'esquerda'
-    const player2 = 'direita'
+   const lutadores = ['P1', 'P2']
 
-    return <div>players</div>
+    return <div>{lutadores}</div>
 }
 
 function EscolhePersonagem({ nome }) {
@@ -32,9 +31,7 @@ function EscolhePersonagem({ nome }) {
         <Paises />
         <Personagens />
         <Players />
-
     </div>
 }
-
 
 export default EscolhePersonagem
