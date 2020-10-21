@@ -1,37 +1,53 @@
 import React from 'react'
 
-function Select({ nome }) {
+import Titulo from '../../abas/Titulo'
+import Campeao from '../../abas/Campeao'
+import Personagens from '../../abas/Personagens'
+import Paises from '../../abas/Paises'
+
+
+const paises = [
+    {
+        nome: 'Brasil',
+    },
+    {
+        nome: 'Japão'
+    },
+    {
+        nome: 'Uruguai',
+    },
+    {
+        nome: 'China'
+    },
+    {
+        nome: 'Peru',
+    },
+    {
+        nome: 'Croácia'
+    }
+]
+
+const personagens = [
+    {
+        id: 1,
+        nome: 'Ken',
+    },
+    {
+        id: 2,
+        nome: 'Ryu'
+    }
+]
+
+const p1 = personagens[0]
+const p2 = personagens[1]
+
+function EscolhePersonagem() {
     return <div>
-        <h1>Selecionar Personagem</h1> {nome}
+        <Titulo nome="Selecionar Personagem" />
+        <Paises paises={paises} />
+        <Personagens personagens={personagens} />
+        <Campeao p1 personagemSelecionado={p1} />
+        <Campeao personagemSelecionado={p2} />
     </div>
 }
-
-function Paises() {
-    const locais = ['Japan', 'Japan', 'Brazil', 'U.S.A', 'U.S.A', 'U.S.S.R'
-    ]
-    return <p>{locais}</p>
-}
-
-function Personagens() {
-    const personagens = ['Ken', 'Ryu']
-
-    return <div>{personagens}</div>
-}
-
-function Players() {
-   const lutadores = ['P1', 'P2']
-
-    return <div>{lutadores}</div>
-}
-
-function EscolhePersonagem({ nome }) {
-
-    return <div>
-        <Select nome={nome} />
-        <Paises />
-        <Personagens />
-        <Players />
-    </div>
-}
-
 export default EscolhePersonagem
